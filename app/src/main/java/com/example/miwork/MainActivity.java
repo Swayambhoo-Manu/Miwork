@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,26 +13,51 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //ADD these code in the  on create method so that our apps starts listening as soon as it starts\
+
+        // Find the View that shows the numbers category
+        TextView numbers = (TextView) findViewById(R.id.numbers);
+        // Set a click listener on that View
+        numbers.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                startActivity(numbersIntent);
+            }
+        });
+
+        // Find the View that shows the numbers category
+        TextView family =(TextView)findViewById(R.id.family);
+        // Set a click listener on that View
+        family.setOnClickListener(new View.OnClickListener(){
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent familyIntent=new Intent(MainActivity.this,FamilyActivity.class);
+                startActivity(familyIntent);
+            }
+        });
+
+        TextView phrases=(TextView)findViewById(R.id.phrases);
+        phrases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent phrssesIntent=new Intent(MainActivity.this,PhrasesActivity.class);
+                startActivity(phrssesIntent);
+            }
+        });
+
+        TextView colors=(TextView)findViewById(R.id.colors);
+        colors.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent colorsIntent=new Intent(MainActivity.this,ColorsActivity.class);
+                startActivity(colorsIntent);
+            }
+        });
     }
 
-    public void openNumbersList(View view){
-        Intent intent=new Intent(MainActivity.this,NumbersActivity.class);
-            startActivity(intent);
-    }
-
-    public void openFamilyList(View view){
-        Intent intent=new Intent(MainActivity.this,FamilyActivity.class);
-        startActivity(intent);
-    }
-
-    public void openPhrasesList(View view){
-        Intent intent=new Intent(MainActivity.this,PhrasesActivity.class);
-        startActivity(intent);
-    }
-
-    public void openColorsList(View view){
-        Intent intent=new Intent(MainActivity.this,ColorsActivity.class);
-        startActivity(intent);
-    }
 
 }
