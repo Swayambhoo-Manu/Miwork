@@ -13,7 +13,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        /***************************************************************************************
+        Added java behaviour to find the view using the id ,setOnClickLister
+        and write the inline class int which onClick method is overridden to create an
+        explicit intent specifying  the context to the finalActivity.class
+         ***************************************************************************************/
         //ADD these code in the  on create method so that our apps starts listening as soon as it starts\
 
         // Find the View that shows the numbers category
