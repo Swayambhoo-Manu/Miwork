@@ -47,16 +47,14 @@ public class ColorsActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);//same xml file is being usd for all the activities
         ArrayList<Word> words=new ArrayList<Word>();
 //        words.add(new Word("zero","lutti"));
-        words.add(new Word("one","lutti"));
-        words.add(new Word("two","otiiko"));
-        words.add(new Word("three","tolookosu"));
-        words.add(new Word("four","oyyisa"));
-        words.add(new Word("five","massokka"));
-        words.add(new Word("six","temmokka"));
-        words.add(new Word("seven","kenekaku"));
-        words.add(new Word("eight","kawinta"));
-        words.add(new Word("nine","wo’e"));
-        words.add(new Word("ten","na’aacha"));
+        words.add(new Word("red", "weṭeṭṭi", R.drawable.color_red));
+        words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow));
+        words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow));
+        words.add(new Word("green", "chokokki", R.drawable.color_green));
+        words.add(new Word("brown", "ṭakaakki", R.drawable.color_brown));
+        words.add(new Word("gray", "ṭopoppi", R.drawable.color_gray));
+        words.add(new Word("black", "kululli", R.drawable.color_black));
+        words.add(new Word("white", "kelelli", R.drawable.color_white));
 
 //        LinearLayout rootView=(LinearLayout)findViewById(R.id.rootView);
 //        int i=0;
