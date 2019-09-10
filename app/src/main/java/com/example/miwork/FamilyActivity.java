@@ -28,17 +28,16 @@ public class FamilyActivity extends AppCompatActivity {
         2)ListView listView = (ListView) findViewById(R.id.lvItems);
         3)listView.setAdapter(itemsAdapter);
 
-
         @@@@@When we want to display a series of items into a list using a custom representation of the items,
         we need to use our own custom XML layout for each item.
         To do this, we need to create our own custom ArrayAdapter class.
         1)First, we often need to define a model to represent the data within each list item.=Word
 
-        We can create a custom ListView of Word objects by subclassing ArrayAdapter to describe how to translate the object into a view within that class and then using it like any other adapter.
+        We can create a custom ListView of Word objects by subclassing ArrayAdapter to describe how to translate the object into a view within that class and
+        then using it like any other adapter.
             line 18 WordAdapter.java
         2)we need to create an XML layout that represents the view template for each item=list_view.xml
         3)we need to define the adapter to describe the process of converting the Java object to a View (in the getView method)
-
 
      */
     @Override
